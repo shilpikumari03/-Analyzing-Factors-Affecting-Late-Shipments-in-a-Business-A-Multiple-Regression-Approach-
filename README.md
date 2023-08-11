@@ -56,9 +56,8 @@ Confidence intervals for predictions are calculated to estimate the range within
 2. Modify the code and variables as needed for your analysis or dataset.
 
 3. To run the R code in this project, you will need to have R and the following packages installed: rio.
--You can install these packages using the following commands in R:
--install.packages("rio")
-After installing the required package, you can simply run the code in the QMB Multiple Regression. R file to perform the data analysis, visualization, and model-building steps.
+- You can install these packages using the following commands in R:
+- install.packages("rio"). After installing the required package, you can simply run the code in the QMB Multiple Regression. R file to perform the data analysis, visualization, and model-building steps.
 
 ## Contributing
 
