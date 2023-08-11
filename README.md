@@ -1,65 +1,73 @@
-# -Analyzing-Factors-Affecting-Late-Shipments-in-a-Business-A-Multiple-Regression-Approach
 
-This repository contains the final project for the course "Analytical Methods for Business" (QMB6304.003F22). The project focuses on conducting multiple regression analyses to analyze factors affecting late order shipments in a company.
+# Analyzing Factors Affecting Late Shipments in a Business - A Multiple Regression Approach
+
+This repository contains the code and documentation for the final project of the course "Analytical Methods for Business" (QMB6304.003F22). The project focuses on analyzing the factors that affect late shipments in a business using a multiple regression approach.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
+- [Description](#description)
 - [Dataset](#dataset)
-- [Regression Analysis](#regression-analysis)
-- [Model Comparison](#model-comparison)
-- [Assumptions Check](#assumptions-check)
+- [Regression Models](#regression-models)
+- [Choosing the Best Model](#choosing-the-best-model)
+- [Assessment of Assumptions](#assessment-of-assumptions)
 - [Interpretation of Coefficients](#interpretation-of-coefficients)
 - [Prediction Confidence Intervals](#prediction-confidence-intervals)
-- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
+## Description
 
-In this project, we aim to analyze the factors contributing to late order shipments within a company. By utilizing multiple regression models, we investigate the relationship between various independent variables such as the number of employees absent, the total number of orders shipped, and the carrier used for shipments. The project assesses the impact of these variables on the dependent variable, which is the number of orders that arrived late.
+This project aims to analyze the factors contributing to late shipments in a business context using a multiple regression approach. The main goal is to determine which factors have a significant impact on the number of late shipments and to build a regression model that best explains this relationship.
 
 ## Dataset
 
-The dataset used in this project comprises self-gathered data on 120 samples of days when shipments were ordered and arrived late. The dataset includes the following variables:
+The dataset used in this project is self-gathered and contains information on a company's order shipment details. The dataset includes the following variables:
 
-- `Late_ship`: Number of orders shipped on a given day that arrived late
-- `Emp_absent`: Number of employees on leave on the given day
-- `Total_ship`: Total number of orders shipped on the given day
-- `Ship_carrier`: The predominant carrier on the given day (coded as 0 for FedEx and 1 for UPS)
+- `Late_ship`: Number of orders shipped on a given day that arrived late to customers.
+- `Emp_absent`: Number of employees on leave on the given day.
+- `Total_ship`: Total number of orders shipped on the given day.
+- `Ship_carrier`: The predominant carrier on the given day (FedEx or UPS).
 
-## Regression Analysis
+## Regression Models
 
-The project involves the implementation of various regression models to understand the relationships between the dependent variable (`Late_ship`) and independent variables (`Emp_absent`, `Total_ship`, `Ship_carrier`). The following model combinations were explored:
+The project employs various regression models to analyze the relationship between the dependent variable (`Late_ship`) and independent variables (`Emp_absent`, `Total_ship`, and `Ship_carrier`). The models include simple regression, multiple regression, interaction terms, and squared terms.
 
-- Simple Regression models
-- Multiple Regression models
-- Interaction term model
-- Squared terms model
+## Choosing the Best Model
 
-## Model Comparison
+The best-fit model is determined based on R-squared values, adjusted R-squared values, and p-values. The model that provides the best explanation for the dependent variable is selected.
 
-A comparison of the different regression models was conducted to determine the best-fitting model. The `stargazer` library was utilized to present the results. The model with the highest adjusted R-squared value, indicating the best explanatory power, was identified as the most suitable.
+## Assessment of Assumptions
 
-## Assumptions Check
-
-Assumptions of linearity, independence of errors, normality of errors, and equality of error variances were assessed for the chosen model. Graphical representations were used to evaluate the validity of these assumptions.
+The project assesses whether the regression assumptions of linearity, independence of errors, normality of errors, and equality of error variances are met. Graphical interpretations are provided for each assumption.
 
 ## Interpretation of Coefficients
 
-The coefficients of the regression models were interpreted to understand the impact of each independent variable on the dependent variable. The sign and significance of the coefficients were analyzed to determine the direction and strength of relationships.
+The coefficients of the regression models are interpreted to understand the relationships between independent and dependent variables. Positive and negative coefficients indicate the direction and magnitude of the effects.
 
 ## Prediction Confidence Intervals
 
-Prediction confidence intervals were calculated for two types of scenarios based on the chosen independent variable values. These intervals provide insights into the range of expected late order shipments given certain conditions.
+Confidence intervals for predictions are calculated to estimate the range within which the predicted values of late shipments lie for different values of the independent variables.
 
-## Getting Started
+## Usage
 
-To explore the project code and findings, follow these steps:
+1. Open and explore the provided R script files to review the code, analysis, and visualizations.
 
-1. Clone this repository: `git clone https://github.com/your-username/multiple-regression-project.git`
-2. Navigate to the project directory: `cd multiple-regression-project`
-3. Open and explore the project files using your preferred coding environment or text editor.
+2. Modify the code and variables as needed for your analysis or dataset.
+
+3. To run the R code in this project, you will need to have R and the following packages installed: rio. You can install these packages using the following commands in R:
+install.packages("rio")
+After installing the required package, you can simply run the code in the QMB Multiple Regression. R file to perform the data analysis, visualization, and model-building steps.
+
+## Contributing
+
+Contributions to this project are welcome. You can contribute by:
+
+- Forking the repository
+- Making necessary changes or improvements
+- Creating a pull request to submit your changes for review
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
